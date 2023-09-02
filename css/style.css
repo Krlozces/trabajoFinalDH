@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/**** Colors ****/
+:root{
+  --color-purple-strong: #8B48BF;
+  --color-purple-light: #8B48BF4D;
+  --color-gray-ligth: #B3B2B7;
+  --color-gray-description-player: #FAFAFA;
+  --color-black: black;
+  --color-white: white;
+  --color-cyan: #3CDDF3;
+  --color-blue-dark: #232C50;
+  --color-blue-footer: #1E1E26;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  min-height: 100vh;
+  max-width: 1440px; /*Desktop*/
+  margin: 0 auto;
+  Font-size: 16px;
+  background-color: var(--color-white);
+}
+
+/* Desktop*/
+
+/*********************** Header **********************/
+
+/*********************** Main **********************/
+
+/*********************** footer **********************/
+
+media(width <= 480px){
+/*********************** Header **********************/
+
+/*********************** Main **********************/
+
+/*********************** footer **********************/
+}
