@@ -28,16 +28,290 @@ body {
 
 /* Desktop*/
 
+/*********** Utils *************/
+
+.main-button-more,
+.main-go-for-it {
+  background-color: var(--color-purple-strong);
+  color: #fff;
+  border-radius:25px;
+  border: none;
+  width: 6.5rem;
+  height: 2.3rem;
+  font-size: .6rem;
+
+}
+
 /*********************** Header **********************/
 
 /*********************** Main **********************/
+.main-container {
+  width: 100%;
+}
+
+/****** question *****/
+
+.main-container-question {
+  background-color: var(--color-purple-strong);
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.main-question {
+  font-size: 2rem;
+}
+
+.main-question::after {
+  content: "What´s different between \A pros?";
+  white-space: pre;
+}
+
+.main-question-description {
+  font-size: .7rem;
+  width: 320px;
+}
+
+.main-question-description p:nth-child(1) {
+  display: block;
+}
+
+.main-question-description p:nth-child(2) {
+  display: none;
+}
+
+.main-containe-answer {
+  border: 1px solid black;
+  width: 100%;
+
+}
+
+.main-question {
+  font-size: 1.7rem;
+}
+
+/****** Answer ******/
+
+/* .main-containe-answer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 40px 0;
+}
+ */
+.main-answers {
+  display: flex;
+  width: 100%;
+  font-size: 12px;
+  padding: 40px 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-number-question {
+  width: 100%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.main-number-question span:nth-child(1) {
+  background-color: var(--color-purple-strong);
+  color: #fff;
+  display: inline-block;
+  width: 42px;
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+}
+.main-number-question span:nth-child(2) {
+  color: var(--color-black);
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.main-answer-description {
+  padding: 0 20px 0 55px;
+  width: 380px;
+}
 
 /*********************** footer **********************/
 
-media(width <= 480px){
+@media(width <= 480px){
 /*********************** Header **********************/
 
 /*********************** Main **********************/
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /****** Question ******/
+  
+  .main-container-question {
+    background-color: var(--color-cyan);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 35px 15px;
+    width: 100%;
+  }
+  
+  .main-question::after {
+    content: "What´s different \A between pros?";
+    white-space: pre;
+  }
+  
+  .main-question-description {
+    font-size: .7rem;
+    padding-top: 40px;
+  }
+  
+  .main-question-description p:nth-child(1) {
+    display: none;
+  }
+  
+  .main-question-description p:nth-child(2) {
+    display: block;
+  }  
 
+  /****** Answer ******/
+  
+  .main-containe-answer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 40px 0;
+  }
+  
+  .main-answers{
+    display: flex;
+    flex-direction: column;
+    width: 93%;
+    color: var(--color-gray-ligth);
+    font-size: 12px;
+  }
+  
+  .main-answer-1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .main-number-question {
+    width: 100%;
+    background-color: var(--color-purple-light);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  
+  .main-number-question span:nth-child(1) {
+    background-color: var(--color-purple-strong);
+    color: #fff;
+    display: inline-block;
+    width: 42px;
+    text-align: center;
+    border-radius: 25px;
+    padding: 5px;
+  }
+  .main-number-question span:nth-child(2) {
+    color: var(--color-black);
+    font-weight: bold;
+  }
+  
+  .main-answer-description {
+    padding-right: 20px;
+  }
+  
+  /****** Best of the best ******/
+  .main-of-the-best {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .display-none,
+  .main-player-1,
+  .main-player-3 {
+    display: none;
+  }
+  
+  .main-best-title { 
+    height: 90px;
+  }
+  
+  .main-player-header {
+    background-color: var(--color-gray-description-player);
+  }
+  
+  .main-player-header img {
+    position: absolute;
+    width: 55px;
+    right: 45%;
+    top: 60px;
+    z-index: 1;
+  }
+  
+  .center-h {
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
+  
+  .main-player-description {
+    position: relative;
+    padding-top: 45px;
+    font-size: .8rem;
+    color: var(--color-gray-ligth);
+    background-color: var(--color-gray-description-player);
+    width: 95%;
+    left: 11px;
+  }
+
+  .main-player-description div:nth-child(1) {
+    color: var(--color-black);
+    font-weight: bold;
+  }
+
+  .main-player-description div:nth-child(2) {
+    padding: 20px 0;
+  }
+
+  .main-button-more {
+    margin: 30px 0 40px 0;
+  }
+  
+  /**** Get to Know ****/
+  .main-team-of-the-year {
+    background-color: var(--color-cyan);
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-team-title {
+    font-size: 1.7rem;
+    padding: 35px 30px;
+    text-align: center;
+  }
+
+  .main-team-title div::after {
+    content: "Get to know the \A best \A teams of the \A year";
+    white-space: pre;
+  }
+
+  .main-go-for-it {
+    background-color: var(--color-blue-dark);
+    margin-bottom: 25px;
+  }
 /*********************** footer **********************/
 }
