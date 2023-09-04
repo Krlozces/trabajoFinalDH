@@ -9,4 +9,7 @@
 
 **código que realizó:** main
 
-### < Tus datos >
+### Brayan Juan Carlos Cespedes Torres
+**email:** bryancespedes1706@gmail.com
+
+**código que realizó:** header - footer
