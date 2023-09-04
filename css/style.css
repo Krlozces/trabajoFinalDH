@@ -19,27 +19,33 @@
 
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
-  min-height: 100vh;
-  max-width: 1440px; /*Desktop*/
+  max-width: 1440px;
   margin: 0 auto;
-  Font-size: 16px;
-  background-color: var(--color-white);
 }
 
 /* Desktop*/
 
 /*********** Utils *************/
 
+/** Buttons **/
 .main-button-more,
-.main-go-for-it {
+.main-button-go-for-it {
   background-color: var(--color-purple-strong);
   color: #fff;
   border-radius:25px;
   border: none;
   width: 6.5rem;
   height: 2.3rem;
-  font-size: .6rem;
+  font-size: .8rem;
+  cursor: pointer;
+}
 
+.center-h,
+.main-player-header,
+.main-button {
+  display: flex;
+  justify-content: center;
+  width: auto;
 }
 
 /*********************** Header **********************/
@@ -49,29 +55,30 @@ body {
   width: 100%;
 }
 
-/****** question *****/
-
+/****** Question ******/
 .main-container-question {
   background-color: var(--color-purple-strong);
   color: var(--color-white);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
   padding: 25px 0;
 }
 
 .main-question {
   font-size: 2rem;
+  padding: 20px 0;
 }
 
-.main-question::after {
-  content: "What´s different between \A pros?";
-  white-space: pre;
+.main-question span {
+  display: block;
 }
 
 .main-question-description {
-  font-size: .7rem;
-  width: 320px;
+  font-size: .9rem;
+  max-width: 33rem;
+  padding: 15px;
 }
 
 .main-question-description p:nth-child(1) {
@@ -82,10 +89,8 @@ body {
   display: none;
 }
 
-.main-containe-answer {
-  border: 1px solid black;
+.main-container-answer {
   width: 100%;
-
 }
 
 .main-question {
@@ -93,21 +98,21 @@ body {
 }
 
 /****** Answer ******/
-
-/* .main-containe-answer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 40px 0;
-}
- */
 .main-answers {
   display: flex;
   width: 100%;
-  font-size: 12px;
-  padding: 40px 0px;
+  padding: 30px 0px;
   flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--color-gray-description-player);
+}
+
+.main-answer-1,
+.main-answer-2,
+.main-answer-3 {
+  width: 32rem;
+  padding-left: 19px;
 }
 
 .main-number-question {
@@ -120,7 +125,7 @@ body {
   background-color: var(--color-purple-strong);
   color: #fff;
   display: inline-block;
-  width: 42px;
+  width: 50px;
   text-align: center;
   border-radius: 25px;
   padding: 5px;
@@ -132,45 +137,137 @@ body {
 }
 
 .main-answer-description {
-  padding: 0 20px 0 55px;
-  width: 380px;
+  padding: 0 20px 0 65px;
+  color: var(--color-gray-ligth);
+}
+
+/****** Best of the best ******/
+.main-best-title {
+  padding: 70px 0 40px;
+  text-align: center;
+  background-color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+.main-of-the-best {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.main-player-1,
+.main-player-2,
+.main-player-3 {
+  width: 400px;
+}
+
+.display-block,
+.main-player-1,
+.main-player-2,
+.main-player-3 {
+  display: block;
+}
+
+.main-player-header {
+  position: relative;
+  height: 40px;
+}
+
+.main-player-header img {
+  position: absolute;
+}
+
+.main-player-description {
+  background-color: var(--color-gray-description-player);
+  padding: 50px 0 10px;
+  margin-bottom: 25px;
+}
+
+.main-player-description div:nth-child(1) {
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.main-player-description div:nth-child(2) {
+  padding: 20px 0;
+}
+
+.main-button {
+  margin: 30px 0 40px 0;
+}
+
+/**** Get to Know ****/
+.main-team-of-the-year {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: var(--color-purple-strong);
+  color: var(--color-white);
+}
+
+.main-team-title-1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.main-team-title-1 span {
+  display: block;
+}
+
+.main-team-title {
+  display: none;
+}
+
+.main-button-go-for-it {
+  background-color: var(--color-white);
+  color: var(--color-purple-strong); 
 }
 
 /*********************** footer **********************/
 
 @media(width <= 480px){
+
 /*********************** Header **********************/
 
 /*********************** Main **********************/
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  
+  /****** Utils ********/
+/** Buttons **/
+  .main-button-more,
+  .main-button-go-for-it {
+    width: 22vw;
+    height: 4vh;
+    border-radius: 4vw;
   }
-  
+
   /****** Question ******/
-  
   .main-container-question {
     background-color: var(--color-cyan);
     color: var(--color-white);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: flex-start;
-    padding: 35px 15px;
+    padding: 20px 15px;
     width: 100%;
+    margin-bottom: 25px;
   }
   
-  .main-question::after {
-    content: "What´s different \A between pros?";
-    white-space: pre;
+  .main-question {
+    font-size: 8.5vw;
+    font-weight: 500;
   }
   
+  .main-question span {
+    display: inline;
+  }
+
   .main-question-description {
-    font-size: .7rem;
-    padding-top: 40px;
+    font-size: .9em;
+    padding: 30px 0 13px;
   }
   
   .main-question-description p:nth-child(1) {
@@ -179,30 +276,33 @@ body {
   
   .main-question-description p:nth-child(2) {
     display: block;
-  }  
+  }
 
   /****** Answer ******/
-  
-  .main-containe-answer {
+  .main-container-answer {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: 40px 0;
   }
   
-  .main-answers{
+  .main-answer-1,
+  .main-answer-2,
+  .main-answer-3 {
+    width: 95vw;
+  }
+
+  .main-answers {
     display: flex;
     flex-direction: column;
-    width: 93%;
+    background-color: var(--color-white);
     color: var(--color-gray-ligth);
-    font-size: 12px;
+    align-items: flex-end;
   }
   
-  .main-answer-1 {
-    display: flex;
-    flex-wrap: wrap;
+  .main-player-description {
+    font-size: 3.2vw;
   }
-  
+
   .main-number-question {
     width: 100%;
     background-color: var(--color-purple-light);
@@ -214,104 +314,88 @@ body {
     background-color: var(--color-purple-strong);
     color: #fff;
     display: inline-block;
-    width: 42px;
-    text-align: center;
+    width: 55px;
     border-radius: 25px;
-    padding: 5px;
+    font-size: 3.2vw;
+    padding: 6px;
   }
+  
   .main-number-question span:nth-child(2) {
     color: var(--color-black);
+    font-size: 3.2vw;
     font-weight: bold;
   }
   
   .main-answer-description {
-    padding-right: 20px;
-  }
+    padding: 8px 10px 0 1px;
+    font-size: 3.2vw;
+  } 
   
   /****** Best of the best ******/
-  .main-of-the-best {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-  }
-
-  .display-none,
   .main-player-1,
   .main-player-3 {
     display: none;
   }
   
-  .main-best-title { 
-    height: 90px;
+  .main-player-1,
+  .main-player-2,
+  .main-player-3 {
+    width: 90%;
+  }
+
+  .main-best-title {
+    width: 100%;
+    padding: 20px 0 40px;
+    text-align: center;
+    background-color: var(--color-white);
+    font-size: 4.1vw;
   }
   
-  .main-player-header {
-    background-color: var(--color-gray-description-player);
-  }
-  
-  .main-player-header img {
-    position: absolute;
-    width: 55px;
-    right: 45%;
-    top: 60px;
-    z-index: 1;
-  }
-  
-  .center-h {
+  .main-of-the-best {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    width: auto;
-  }
-  
-  .main-player-description {
-    position: relative;
-    padding-top: 45px;
-    font-size: .8rem;
-    color: var(--color-gray-ligth);
-    background-color: var(--color-gray-description-player);
-    width: 95%;
-    left: 11px;
+    text-align: center;
+    width: 100%;
+    padding: 30px 0;
   }
 
-  .main-player-description div:nth-child(1) {
-    color: var(--color-black);
-    font-weight: bold;
-  }
-
-  .main-player-description div:nth-child(2) {
-    padding: 20px 0;
+  .main-button {
+    margin: 0 0 53px 0;
   }
 
   .main-button-more {
-    margin: 30px 0 40px 0;
+    font-size: 3.2vw;
   }
-  
+
   /**** Get to Know ****/
   .main-team-of-the-year {
     background-color: var(--color-cyan);
     color: #fff;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .main-team-title {
-    font-size: 1.7rem;
-    padding: 35px 30px;
+    font-size: 7.8vw;
     text-align: center;
+    display: block;
   }
 
-  .main-team-title div::after {
-    content: "Get to know the \A best \A teams of the \A year";
-    white-space: pre;
+  .main-team-title-1 {
+    display: none;
   }
 
-  .main-go-for-it {
+  .main-team-title span {
+    display: block;
+  }
+
+  .main-button-go-for-it {
     background-color: var(--color-blue-dark);
-    margin-bottom: 25px;
-  }
+    color: var(--color-white);
+    font-size: 3.2vw;
+    margin: 30px 0 0;
+  } 
 /*********************** footer **********************/
 }
