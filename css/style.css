@@ -19,25 +19,383 @@
 
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
-  min-height: 100vh;
-  max-width: 1440px; /*Desktop*/
+  max-width: 1440px;
   margin: 0 auto;
-  Font-size: 16px;
-  background-color: var(--color-white);
 }
 
 /* Desktop*/
 
+/*********** Utils *************/
+
+/** Buttons **/
+.main-button-more,
+.main-button-go-for-it {
+  background-color: var(--color-purple-strong);
+  color: #fff;
+  border-radius:25px;
+  border: none;
+  width: 6.5rem;
+  height: 2.3rem;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+.center-h,
+.main-player-header,
+.main-button {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
 /*********************** Header **********************/
 
 /*********************** Main **********************/
+.main-container {
+  width: 100%;
+}
+
+/****** Question ******/
+.main-container-question {
+  background-color: var(--color-purple-strong);
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 25px 0;
+}
+
+.main-question {
+  font-size: 2rem;
+  padding: 20px 0;
+}
+
+.main-question span {
+  display: block;
+}
+
+.main-question-description {
+  font-size: .9rem;
+  max-width: 33rem;
+  padding: 15px;
+}
+
+.main-question-description p:nth-child(1) {
+  display: block;
+}
+
+.main-question-description p:nth-child(2) {
+  display: none;
+}
+
+.main-container-answer {
+  width: 100%;
+}
+
+.main-question {
+  font-size: 1.7rem;
+}
+
+/****** Answer ******/
+.main-answers {
+  display: flex;
+  width: 100%;
+  padding: 30px 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--color-gray-description-player);
+}
+
+.main-answer-1,
+.main-answer-2,
+.main-answer-3 {
+  width: 32rem;
+  padding-left: 19px;
+}
+
+.main-number-question {
+  width: 100%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.main-number-question span:nth-child(1) {
+  background-color: var(--color-purple-strong);
+  color: #fff;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+}
+.main-number-question span:nth-child(2) {
+  color: var(--color-black);
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.main-answer-description {
+  padding: 0 20px 0 65px;
+  color: var(--color-gray-ligth);
+}
+
+/****** Best of the best ******/
+.main-best-title {
+  padding: 70px 0 40px;
+  text-align: center;
+  background-color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+.main-of-the-best {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.main-player-1,
+.main-player-2,
+.main-player-3 {
+  width: 400px;
+}
+
+.display-block,
+.main-player-1,
+.main-player-2,
+.main-player-3 {
+  display: block;
+}
+
+.main-player-header {
+  position: relative;
+  height: 40px;
+}
+
+.main-player-header img {
+  position: absolute;
+}
+
+.main-player-description {
+  background-color: var(--color-gray-description-player);
+  padding: 50px 0 10px;
+  margin-bottom: 25px;
+}
+
+.main-player-description div:nth-child(1) {
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.main-player-description div:nth-child(2) {
+  padding: 20px 0;
+}
+
+.main-button {
+  margin: 30px 0 40px 0;
+}
+
+/**** Get to Know ****/
+.main-team-of-the-year {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: var(--color-purple-strong);
+  color: var(--color-white);
+}
+
+.main-team-title-1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.main-team-title-1 span {
+  display: block;
+}
+
+.main-team-title {
+  display: none;
+}
+
+.main-button-go-for-it {
+  background-color: var(--color-white);
+  color: var(--color-purple-strong); 
+}
 
 /*********************** footer **********************/
 
-media(width <= 480px){
+@media(width <= 480px){
+
 /*********************** Header **********************/
 
 /*********************** Main **********************/
+  
+  /****** Utils ********/
+/** Buttons **/
+  .main-button-more,
+  .main-button-go-for-it {
+    width: 22vw;
+    height: 4vh;
+    border-radius: 4vw;
+  }
 
+  /****** Question ******/
+  .main-container-question {
+    background-color: var(--color-cyan);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 15px;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  
+  .main-question {
+    font-size: 8.5vw;
+    font-weight: 500;
+  }
+  
+  .main-question span {
+    display: inline;
+  }
+
+  .main-question-description {
+    font-size: .9em;
+    padding: 30px 0 13px;
+  }
+  
+  .main-question-description p:nth-child(1) {
+    display: none;
+  }
+  
+  .main-question-description p:nth-child(2) {
+    display: block;
+  }
+
+  /****** Answer ******/
+  .main-container-answer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .main-answer-1,
+  .main-answer-2,
+  .main-answer-3 {
+    width: 95vw;
+  }
+
+  .main-answers {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    color: var(--color-gray-ligth);
+    align-items: flex-end;
+  }
+  
+  .main-player-description {
+    font-size: 3.2vw;
+  }
+
+  .main-number-question {
+    width: 100%;
+    background-color: var(--color-purple-light);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  
+  .main-number-question span:nth-child(1) {
+    background-color: var(--color-purple-strong);
+    color: #fff;
+    display: inline-block;
+    width: 55px;
+    border-radius: 25px;
+    font-size: 3.2vw;
+    padding: 6px;
+  }
+  
+  .main-number-question span:nth-child(2) {
+    color: var(--color-black);
+    font-size: 3.2vw;
+    font-weight: bold;
+  }
+  
+  .main-answer-description {
+    padding: 8px 10px 0 1px;
+    font-size: 3.2vw;
+  } 
+  
+  /****** Best of the best ******/
+  .main-player-1,
+  .main-player-3 {
+    display: none;
+  }
+  
+  .main-player-1,
+  .main-player-2,
+  .main-player-3 {
+    width: 90%;
+  }
+
+  .main-best-title {
+    width: 100%;
+    padding: 20px 0 40px;
+    text-align: center;
+    background-color: var(--color-white);
+    font-size: 4.1vw;
+  }
+  
+  .main-of-the-best {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  .main-button {
+    margin: 0 0 53px 0;
+  }
+
+  .main-button-more {
+    font-size: 3.2vw;
+  }
+
+  /**** Get to Know ****/
+  .main-team-of-the-year {
+    background-color: var(--color-cyan);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-team-title {
+    font-size: 7.8vw;
+    text-align: center;
+    display: block;
+  }
+
+  .main-team-title-1 {
+    display: none;
+  }
+
+  .main-team-title span {
+    display: block;
+  }
+
+  .main-button-go-for-it {
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+    font-size: 3.2vw;
+    margin: 30px 0 0;
+  } 
 /*********************** footer **********************/
 }
