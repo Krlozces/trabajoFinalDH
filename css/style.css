@@ -6,8 +6,8 @@
 
 /**** Colors ****/
 :root{
-  --color-purple-strong: #8B48BF;
   --color-purple-light: #8B48BF4D;
+  --color-purple-strong: #8B48BF;
   --color-gray-ligth: #B3B2B7;
   --color-gray-description-player: #FAFAFA;
   --color-black: black;
@@ -38,6 +38,48 @@ body {
   height: 2.3rem;
   font-size: .8rem;
   cursor: pointer;
+}
+
+/** Animation **/
+.effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+button {
+  transition: all 0.2s linear 0s;
+}
+
+.inverse:before {
+  color: var(--color-purple-strong);
+}
+
+button:before {
+  content: "\f061";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 30px;
+  height: 100%;
+  border-radius: 0px 6px 6px 0px;
+  transition: all 0.2s linear 0s;
+  text-align: center;
+}
+button:hover {
+  text-indent: -30px;
+}
+button:hover:before {
+  right: 0;
+  text-indent: 0px;
 }
 
 .center-h,
@@ -415,12 +457,16 @@ header ul>li{
 /*********************** Main **********************/
   
   /****** Utils ********/
-/** Buttons **/
+  /** Buttons **/
   .main-button-more,
   .main-button-go-for-it {
     width: 22vw;
     height: 4vh;
     border-radius: 4vw;
+  }
+
+  .inverse:before {
+    color: var(--color-white);
   }
 
   /****** Question ******/
@@ -625,5 +671,3 @@ header ul>li{
     width: 80%;
   }
 }
-
-
