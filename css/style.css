@@ -411,49 +411,63 @@ input{
   border: none;
 }
 
+#image-hamburger{
+  display: none;
+}
+
 @media(max-width: 740px){
 
 /*********************** Header **********************/
-.barra-navegacion{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top:65px;
-  padding-bottom: 65px;
-  padding-right: 165px;
-  padding-left: 165px;
-}
+  .barra-navegacion{
+    display: flex;
+    justify-content:space-around;
+    padding: 65px 0px;
+  }
 
-header ul{
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
+  .barra-navegacion button{
+    display: none;
+  }
 
-header ul>li{
-  padding: 0 10px;
-}
+  .barra-navegacion img{
+    margin-left: 30px;
+  }
+  header ul{
+    /* list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; */
+    display: none;
+  }
 
-.header-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  padding: 20px;
-  margin-bottom: 4px;
-}
+  #image-hamburger{
+    display: block;
+    margin-left: 170px;
+  }
 
-.header-content{
-  width: 400px;
-}
+  header ul>li{
+    padding: 0 10px;
+  }
 
-.img-header{
-  width: 400px;
-  align-self: flex-start;
-  height: 341.53px;
-}
+  .header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    margin-bottom: 4px;
+  }
+
+  .header-content{
+    width: 400px;
+  }
+
+  .img-header{
+    width: 400px;
+    align-self: flex-start;
+    height: 341.53px;
+    margin-bottom: 60px;
+  }
 /*********************** Main **********************/
   
   /****** Utils ********/
@@ -630,13 +644,13 @@ header ul>li{
 
   footer p{
     position: relative;
-    top: 335px;
-    margin: 10px auto;
+    top: 355px; /*335px*/
+    margin: 10px auto 20px auto;
   }
 
   .section-nav-footer{
     width: 70%;
-    margin:20px auto;
+    margin:10px auto 30px auto;
     order: 2;
   }
 
@@ -644,13 +658,17 @@ header ul>li{
     order: 3;
     width: 100%;
     align-items: center;
-    margin: 0;
+    margin: 5px 0;
   }
 
   .section-logo-footer01{
     order: 1;
-    margin:5px;
-    padding: 20px;
+    margin:20px;
+    padding: 5px;
+  }
+
+  .section-logo-footer01 button{
+    padding: 4px 4px;
   }
 
   .logo-footer{
@@ -669,5 +687,6 @@ header ul>li{
 
   input{
     width: 80%;
+    padding: 15px 4px;
   }
 }
